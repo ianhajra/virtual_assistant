@@ -4,7 +4,7 @@ Welcome to the Virtual Assistant project! This is an open-source virtual assista
 
 ## Work in Progress
 
-Please note that this project is currently a work in progress. We are actively developing all features of this product. Your feedback and contributions are highly valued!
+Please note that this project is currently a work in progress. We are actively developing all features of this product, and are actively seeking developers! Your feedback and contributions are highly valued.
 
 ## Features
 
