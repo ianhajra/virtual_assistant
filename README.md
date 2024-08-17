@@ -1,6 +1,6 @@
 # Virtual Assistant
 
-Welcome to the Virtual Assistant project! This is an open-source virtual assistant designed to run on macOS, Linux, and Windows. It is built to handle a variety of tasks, including natural language processing (NLP), API integration, and managing user preferences.
+Welcome to the Virtual Assistant project! This is an open-source virtual assistant designed to run on macOS, Linux, and Windows. It is built to handle a variety of tasks, and is tailored to the needs of working professionals.
 
 ## Work in Progress
 
