@@ -21,6 +21,6 @@ def remove_stop_words(tokens: list[str]) -> list[str]:
 def lemmatize(tokens: list[str]) -> list[str]:
     pass
 
-# Function to process a command by applying a series of text processing steps
-def process_command(text: str) -> list[str]:
+# Function to process a text by applying a series of text processing steps
+def process_text(text: str) -> list[str]:
     pass
