@@ -1,7 +1,7 @@
 import pytest
 from nlp.text_processing import normalize, tokenize, remove_stop_words, lemmatize, process_command
 
-# normalize text by converting it to lowercase
+# normalize text by converting it to lowercase and removing non alphabetic and whitespace characters
 def test_normalize():
     assert normalize("Hello, World!") == "hello world"
     assert normalize("WeIrD InPUt") == "weird input"
