@@ -1,13 +1,9 @@
 # Function to normalize text by converting it to lowercase
 def normalize(text: str) -> str:
-    pass
+    return text.lower()
 
 # Function to tokenize the text, splitting it into individual words or tokens
 def tokenize(text: str) -> list[str]:
-    pass
-
-# Function to remove punctuation from the text
-def remove_punctuation(text: str) -> str:
     pass
 
 # Function to remove common stop words from a list of tokens
