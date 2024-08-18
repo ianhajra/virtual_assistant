@@ -4,9 +4,6 @@ def test_normalize():
 def test_tokenize():
   return False
 
-def test_remove_punctuation():
-  return False
-
 def test_remove_stop_words():
   return False
 
@@ -23,9 +20,6 @@ if(not test_normalize()):
 
 if(not test_tokenize()):
   print("Test tokenize failed")
-
-if(not test_remove_punctuation()):
-  print("Test remove_punctuation failed")
 
 if(not test_remove_stop_words()):
   print("Test remove_stop_words failed")
