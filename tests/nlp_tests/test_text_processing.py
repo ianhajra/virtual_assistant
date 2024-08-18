@@ -1,19 +1,20 @@
 import pytest
+from nlp.text_processing import normalize, tokenize, remove_stop_words, lemmatize, process_command
 
 def test_normalize():
-    return False
+    normalize("Hello, World!") == "hello, world!"
 
 def test_tokenize():
-    return False
+    tokenize("Hello, World!") == ["hello", "world"]
 
 def test_remove_stop_words():
-    return False
+    remove_stop_words(["hello", "and", "world"]) == ["hello", "world"]
 
 def test_lemmatize():
-    return False
+    lemmatize(["running", "jumps"]) == ["run", "jump"]
 
 def test_process_command():
-    return False
+    process_command("Hello, World!") == ["hello", "world"]
 
 
 # pytest output
