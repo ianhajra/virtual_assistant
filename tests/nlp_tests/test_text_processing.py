@@ -1,34 +1,32 @@
+import pytest
+
 def test_normalize():
-  return False
+    return False
 
 def test_tokenize():
-  return False
+    return False
 
 def test_remove_stop_words():
-  return False
+    return False
 
 def test_lemmatize():
-  return False
+    return False
 
 def test_process_command():
-  return False
+    return False
 
 
-# Test output
-if(not test_normalize()):
-  print("Test normalize failed")
+# pytest output
+assert test_normalize() == True
 
-if(not test_tokenize()):
-  print("Test tokenize failed")
+assert test_tokenize() == True
 
-if(not test_remove_stop_words()):
-  print("Test remove_stop_words failed")
+assert test_remove_stop_words() == True
 
-if(not test_lemmatize()):
-  print("Test lemmatize failed")
+assert test_lemmatize() == True
 
-if(not test_process_command()):
-  print("Test process_command failed")
+assert test_process_command() == True
+
 
   
   
