@@ -9,7 +9,7 @@ def normalize(text: str) -> str:
 
 # Function to tokenize the text, splitting it into individual words or tokens
 def tokenize(text: str) -> list[str]:
-    pass
+    return re.findall(r'\w+|[^\w\s]', text)
 
 # Function to remove common stop words from a list of tokens
 # (e.g., "and", "the", "is", etc.)
