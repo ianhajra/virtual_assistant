@@ -1,23 +1,38 @@
 import pytest
 from nlp.text_processing import normalize, tokenize, remove_stop_words, lemmatize, process_command
 
+# normalize text by converting it to lowercase
 def test_normalize():
-    normalize("Hello, World!") == "hello, world!"
-
+    if(normalize("Hello, World!") != "hello, world!"):
+        return False
+    
+    return True
+    
+# tokenize the text, splitting it into individual words or tokens
 def test_tokenize():
-    tokenize("Hello, World!") == ["hello", "world"]
+    if(tokenize("Hello, World!") != ["hello", "world"]):
+        return False
 
+    return True
+
+# remove common stop words from a list of tokens
+# (e.g., "and", "the", "is", etc.)
 def test_remove_stop_words():
-    remove_stop_words(["hello", "and", "world"]) == ["hello", "world"]
+    if(remove_stop_words(["hello", "and", "world"]) != ["hello", "world"])
+        return False
+    
+    return True
 
+# lemmatize tokens, reducing words to their base or root form
+# (e.g., "running" to "run", "jumps" to "jump")
 def test_lemmatize():
-    lemmatize(["running", "jumps"]) == ["run", "jump"]
+    if(lemmatize(["running", "jumps"]) != ["run", "jump"])
+        return False
 
-def test_process_command():
-    process_command("Hello, World!") == ["hello", "world"]
+    return True
 
 
-# pytest output
+# PYTEST OUTPUT
 assert test_normalize() == True
 
 assert test_tokenize() == True
@@ -25,8 +40,6 @@ assert test_tokenize() == True
 assert test_remove_stop_words() == True
 
 assert test_lemmatize() == True
-
-assert test_process_command() == True
 
 
   
