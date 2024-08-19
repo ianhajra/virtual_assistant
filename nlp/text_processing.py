@@ -1,4 +1,5 @@
 import re
+from .constants import STOP_WORDS
 
 # Function to normalize text by converting it to lowercase
 # And remove non whitespace and alphabetic characters
@@ -14,7 +15,7 @@ def tokenize(text: str) -> list[str]:
 # Function to remove common stop words from a list of tokens
 # (e.g., "and", "the", "is", etc.)
 def remove_stop_words(tokens: list[str]) -> list[str]:
-    pass
+    return [token for token in tokens if token not in STOP_WORDS]
 
 # Function to lemmatize tokens, reducing words to their base or root form
 # (e.g., "running" to "run", "jumps" to "jump")
