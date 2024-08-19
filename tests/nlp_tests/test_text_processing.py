@@ -1,5 +1,5 @@
 import pytest
-from nlp.text_processing import normalize, tokenize, remove_stop_words, lemmatize, process_command
+from nlp.text_processing import normalize, tokenize, remove_stop_words, lemmatize, process_text
 
 # normalize text by converting it to lowercase and removing non alphabetic and whitespace characters
 def test_normalize():
@@ -90,38 +90,33 @@ def test_tokenize():
 # remove common stop words from a list of tokens
 # (e.g., "and", "the", "is", etc.)
 def test_remove_stop_words():
-    assert remove_stop_words(["hello", "and", "world"]) == ["hello", "world"]
-    assert remove_stop_words(["this", "is", "a", "test"]) == ["test"]
-    assert remove_stop_words(["the", "quick", "brown", "fox"]) == ["quick", "brown", "fox"]
-    assert remove_stop_words(["jumped", "over", "the", "lazy", "dog"]) == ["jumped", "lazy", "dog"]
-    assert remove_stop_words(["a", "and", "the", "in"]) == []
-    assert remove_stop_words(["and", "the", "cat", "in", "the", "hat"]) == ["cat", "hat"]
-    assert remove_stop_words(["running", "and", "jumping"]) == ["running", "jumping"]
-    assert remove_stop_words(["this", "sentence", "has", "no", "stop", "words"]) == ["sentence", "stop", "words"]
-    assert remove_stop_words(["all", "stop", "words", "like", "and", "the", "removed"]) == ["stop", "words", "removed"]
-    assert remove_stop_words(["stopwords", "removed", "properly"]) == ["stopwords", "removed", "properly"]
-    assert remove_stop_words(["the", "words", "in", "this", "sentence", "remain"]) == ["words", "sentence", "remain"]
-    assert remove_stop_words(["a", "story", "with", "no", "end"]) == ["story", "end"]
-    assert remove_stop_words(["stop", "words", "will", "be", "gone"]) == ["stop", "words", "gone"]
-    assert remove_stop_words(["example", "with", "mixed", "stop", "words"]) == ["example", "mixed", "stop", "words"]
-    assert remove_stop_words(["an", "array", "with", "no", "stops"]) == ["array", "stops"]
-    assert remove_stop_words(["no", "stop", "words", "here"]) == ["stop", "words"]
-    assert remove_stop_words(["keeping", "all", "useful", "words"]) == ["keeping", "useful", "words"]
-    assert remove_stop_words(["every", "word", "matters", "here"]) == ["word", "matters"]
-    assert remove_stop_words(["no", "removal", "necessary"]) == ["removal", "necessary"]
-    assert remove_stop_words(["keep", "the", "essentials"]) == ["keep", "essentials"]
-    assert remove_stop_words(["only", "important", "words", "remain"]) == ["important", "words"]
-    assert remove_stop_words(["ignore", "the", "small", "words"]) == ["ignore", "small", "words"]
-    assert remove_stop_words(["all", "stop", "words", "gone"]) == ["stop", "words", "gone"]
-    assert remove_stop_words(["this", "is", "completely", "filtered"]) == ["completely", "filtered"]
-    assert remove_stop_words(["words", "with", "meaning"]) == ["words", "meaning"]
-    assert remove_stop_words(["all", "words", "kept"]) == ["words", "kept"]
-    assert remove_stop_words(["no", "removal"]) == ["removal"]
-    assert remove_stop_words(["everything", "is", "useful"]) == ["everything", "useful"]
-    assert remove_stop_words(["every", "word", "is", "important"]) == ["word", "important"]
-    assert remove_stop_words(["no", "stop", "words"]) == ["stop", "words"]
-    assert remove_stop_words(["keeps", "important", "content"]) == ["keeps", "important", "content"]
-    assert remove_stop_words(["ignores", "useless", "terms"]) == ["ignores", "useless", "terms"]
+    assert remove_stop_words(["i", "am", "going", "to", "the", "store"]) == ["going", "store"]
+    assert remove_stop_words(["a", "the", "is", "in", "on"]) == []
+    assert remove_stop_words(["apple", "banana", "cherry"]) == ["apple", "banana", "cherry"]
+    assert remove_stop_words(["the", "quick", "Brown", "fox"]) == ["quick", "Brown", "fox"]
+    assert remove_stop_words([]) == []
+    assert remove_stop_words(["can't", "won't", "he", "said", "she"]) == ["said"]
+    assert remove_stop_words(["an", "about", "hello", "there"]) == ["hello"]
+    assert remove_stop_words(["can't", "won't", "why", "hello"]) == ["hello"]
+    assert remove_stop_words(["here", "is", "another", "test"]) == ["here", "another", "test"]
+    assert remove_stop_words(["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"]) == ["quick", "brown", "fox", "jumps", "lazy", "dog"]
+    assert remove_stop_words(["what", "is", "the", "meaning", "of", "life"]) == ["meaning", "life"]
+    assert remove_stop_words(["this", "is", "a", "test", "with", "multiple", "stop", "words"]) == ["test", "multiple", "stop", "words"]
+    assert remove_stop_words(["how", "are", "you", "doing", "today"]) == ["today"]
+    assert remove_stop_words(["i", "have", "been", "working", "hard"]) == ["working", "hard"]
+    assert remove_stop_words(["through", "the", "night", "and", "day"]) == ["night", "day"]
+    assert remove_stop_words(["stop", "words", "are", "important", "for", "text", "processing"]) == ["stop", "words", "important", "text", "processing"]
+    assert remove_stop_words(["all", "words", "should", "be", "processed"]) == ["words", "processed"]
+    assert remove_stop_words(["a", "little", "bit", "of", "space", "here"]) == ["little", "bit", "space", "here"]
+    assert remove_stop_words(["these", "are", "some", "random", "words"]) == ["random", "words"]
+    assert remove_stop_words(["even", "if", "the", "stop", "words", "are", "complex"]) == ["even", "stop", "words", "complex"]
+    assert remove_stop_words(["can", "you", "see", "the", "difference"]) == ["see", "difference"]
+    assert remove_stop_words(["removing", "stop", "words", "improves", "clarity"]) == ["removing", "stop", "words", "improves", "clarity"]
+    assert remove_stop_words(["here", "is", "another", "sentence", "with", "stop", "words"]) == ["here", "another", "sentence", "stop", "words"]
+    assert remove_stop_words(["simple", "text", "processing", "examples"]) == ["simple", "text", "processing", "examples"]
+    assert remove_stop_words(["test", "cases", "should", "cover", "all", "edge", "cases"]) == ["test", "cases", "cover", "edge", "cases"]
+    assert remove_stop_words(["the", "more", "tests", "you", "write", "the", "better"]) == ["tests", "write", "better"]
+    assert remove_stop_words(["make", "sure", "to", "test", "edge", "cases", "thoroughly"]) == ["make", "sure", "test", "edge", "cases", "thoroughly"]
 
 
 # lemmatize tokens, reducing words to their base or root form
