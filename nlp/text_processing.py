@@ -28,4 +28,8 @@ def stem(tokens: list[str]) -> list[str]:
 
 # Function to process a text by applying a series of text processing steps
 def process_text(text: str) -> list[str]:
-    pass
+    text = normalize(text)
+    text = tokenize(text)
+    text = remove_stop_words(text)
+    text = stem(text)
+    return text
