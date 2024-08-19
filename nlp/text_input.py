@@ -1,2 +1,3 @@
 def take_user_input() -> str:
-    pass    
+    user_input = input()
+    return user_input    
