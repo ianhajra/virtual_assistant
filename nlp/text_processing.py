@@ -1,5 +1,10 @@
 import re
+
 from .constants import STOP_WORDS
+from nltk.stem import PorterStemmer
+
+# Used for stemming later on
+stemmer = PorterStemmer()
 
 # Function to normalize text by converting it to lowercase
 # And remove non whitespace and alphabetic characters
@@ -19,7 +24,7 @@ def remove_stop_words(tokens: list[str]) -> list[str]:
 
 # Function to stem tokens, reducing words to a stemmed form
 def stem(tokens: list[str]) -> list[str]:
-    pass
+    return [stemmer.stem(token) for token in tokens]
 
 # Function to process a text by applying a series of text processing steps
 def process_text(text: str) -> list[str]:
