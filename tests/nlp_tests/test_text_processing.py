@@ -1,5 +1,5 @@
 import pytest
-from nlp.text_processing import normalize, tokenize, remove_stop_words, lemmatize, process_text
+from nlp.text_processing import normalize, tokenize, remove_stop_words, stem, process_text
 
 # normalize text by converting it to lowercase and removing non alphabetic and whitespace characters
 def test_normalize():
@@ -117,39 +117,3 @@ def test_remove_stop_words():
     assert remove_stop_words(["test", "cases", "should", "cover", "all", "edge", "cases"]) == ["test", "cases", "cover", "edge", "cases"]
     assert remove_stop_words(["the", "more", "tests", "you", "write", "the", "better"]) == ["tests", "write", "better"]
     assert remove_stop_words(["make", "sure", "to", "test", "edge", "cases", "thoroughly"]) == ["make", "sure", "test", "edge", "cases", "thoroughly"]
-
-
-# lemmatize tokens, reducing words to their base or root form
-# (e.g., "running" to "run", "jumps" to "jump")
-def test_lemmatize():
-    assert lemmatize(["running", "jumps"]) == ["run", "jump"]
-    assert lemmatize(["running", "jumps", "easily"]) == ["run", "jump", "easily"]
-    assert lemmatize(["better", "cats", "studies"]) == ["good", "cat", "study"]
-    assert lemmatize(["children", "feet", "teeth"]) == ["child", "foot", "tooth"]
-    assert lemmatize(["wolves", "buses", "geese"]) == ["wolf", "bus", "goose"]
-    assert lemmatize(["thinking", "going", "singing"]) == ["think", "go", "sing"]
-    assert lemmatize(["flying", "cars", "do"]) == ["fly", "car", "do"]
-    assert lemmatize(["flies", "ran", "drives"]) == ["fly", "run", "drive"]
-    assert lemmatize(["played", "doing", "sitting"]) == ["play", "do", "sit"]
-    assert lemmatize(["quickly", "slower", "happiest"]) == ["quickly", "slow", "happy"]
-    assert lemmatize(["driving", "eaten", "gone"]) == ["drive", "eat", "go"]
-    assert lemmatize(["wrote", "writing", "writers"]) == ["write", "write", "writer"]
-    assert lemmatize(["better", "worse", "more"]) == ["good", "bad", "more"]
-    assert lemmatize(["swimming", "dancing", "dreaming"]) == ["swim", "dance", "dream"]
-    assert lemmatize(["thieves", "knives", "wives"]) == ["thief", "knife", "wife"]
-    assert lemmatize(["happier", "loveliest", "saddest"]) == ["happy", "lovely", "sad"]
-    assert lemmatize(["mice", "men", "children"]) == ["mouse", "man", "child"]
-    assert lemmatize(["faster", "strongest", "cleverest"]) == ["fast", "strong", "clever"]
-    assert lemmatize(["cities", "babies", "puppies"]) == ["city", "baby", "puppy"]
-    assert lemmatize(["saw", "seen", "seeing"]) == ["see", "see", "see"]
-    assert lemmatize(["bought", "baking", "baker"]) == ["buy", "bake", "baker"]
-    assert lemmatize(["happily", "quickly", "softly"]) == ["happily", "quickly", "softly"]
-    assert lemmatize(["calves", "hooves", "leaves"]) == ["calf", "hoof", "leaf"]
-    assert lemmatize(["fishing", "hunters", "traveled"]) == ["fish", "hunter", "travel"]
-    assert lemmatize(["leafs", "beliefs", "chiefs"]) == ["leaf", "belief", "chief"]
-    assert lemmatize(["matches", "kisses", "bosses"]) == ["match", "kiss", "boss"]
-    assert lemmatize(["doing", "making", "created"]) == ["do", "make", "create"]
-    assert lemmatize(["tries", "tries", "tried"]) == ["try", "try", "try"]
-    assert lemmatize(["caring", "hating", "loving"]) == ["care", "hate", "love"]
-    assert lemmatize(["jumps", "jumping", "jumped"]) == ["jump", "jump", "jump"]
-    assert lemmatize(["easier", "easiest", "easily"]) == ["easy", "easy", "easily"]

@@ -17,9 +17,8 @@ def tokenize(text: str) -> list[str]:
 def remove_stop_words(tokens: list[str]) -> list[str]:
     return [token for token in tokens if token not in STOP_WORDS]
 
-# Function to lemmatize tokens, reducing words to their base or root form
-# (e.g., "running" to "run", "jumps" to "jump")
-def lemmatize(tokens: list[str]) -> list[str]:
+# Function to stem tokens, reducing words to a stemmed form
+def stem(tokens: list[str]) -> list[str]:
     pass
 
 # Function to process a text by applying a series of text processing steps

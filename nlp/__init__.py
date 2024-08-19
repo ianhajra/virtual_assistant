@@ -1,1 +1,1 @@
-from .text_processing import normalize, tokenize, remove_stop_words, lemmatize, process_text
+from .text_processing import normalize, tokenize, remove_stop_words, stem, process_text
