@@ -1,5 +1,4 @@
 #include "../include/logger.h"
-#include "../include/utils.h"
 #include <iostream>
 #include <ctime>
 
@@ -8,6 +7,7 @@ const std::string RESET = "\033[0m";
 const std::string BLUE = "\033[34m";
 const std::string YELLOW = "\033[33m";
 const std::string RED = "\033[31m";
+const std::string GREEN = "\033[32m";
 
 // Default constructor: Initialize with a default filename
 Logger::Logger()
@@ -15,7 +15,7 @@ Logger::Logger()
     initializeDefaultLogFile();
 }
 
-// Constructor: Opens the log file
+// Constructor: Takes a filename for the log file
 Logger::Logger(const std::string& filename)
 {
     logFile.open(filename, std::ios::app);
@@ -64,6 +64,7 @@ std::string Logger::levelToString(LogLevel level)
 {
     switch (level) {
         case LogLevel::DEBUG: return "DEBUG";
+        case LogLevel::INFO: return "INFO";
         case LogLevel::WARNING: return "WARNING";
         case LogLevel::ERROR: return "ERROR";
         default: return "UNKNOWN";
@@ -80,6 +81,11 @@ void Logger::log(LogLevel level, const std::string& message)
 void Logger::logDebug(const std::string& message)
 {
     log(LogLevel::DEBUG, message);
+}
+
+void Logger::logInfo(const std::string& message)
+{
+    log(LogLevel::INFO, message);
 }
 
 void Logger::logWarning(const std::string& message)
@@ -104,6 +110,7 @@ void Logger::logMessage(LogLevel level, const std::string& message)
 
     switch (level) {
         case LogLevel::DEBUG: color = BLUE; break;
+        case LogLevel::INFO: color = GREEN; break;
         case LogLevel::WARNING: color = YELLOW; break;
         case LogLevel::ERROR: color = RED; break;
     }
