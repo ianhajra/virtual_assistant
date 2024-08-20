@@ -49,3 +49,6 @@ obj/
 
 # Log Files
 ./log/*.txt
+
+# config.json
+core/cfg/config.json
