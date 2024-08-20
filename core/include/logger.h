@@ -37,7 +37,8 @@ public:
 
 private:
     std::ofstream logFile;
+
     std::string levelToString(LogLevel level);
-    void logMessage(const std::string& levelStr, const std::string& message);
+    void logMessage(LogLevel level, const std::string& message);
     void initializeDefaultLogFile(); // Initialize with a default filename
 };
