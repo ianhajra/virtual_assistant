@@ -1,3 +1,5 @@
+#pragma once
+
 class ModManager
 {
 public:
@@ -7,3 +9,4 @@ public:
 
 private:
 };
+

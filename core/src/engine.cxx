@@ -24,6 +24,10 @@ Engine::~Engine()
  */
 void Engine::init()
 {
+    this->utils = Utils();
+    this->logger = Logger();
+    this->configLoader = ConfigLoader();
+    this->modManager = ModManager();
 }
 
 void Engine::run()

@@ -1,3 +1,5 @@
+#pragma once
+
 class ConfigLoader
 {
 public:

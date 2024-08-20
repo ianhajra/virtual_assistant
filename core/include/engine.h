@@ -1,5 +1,4 @@
-#ifndef ENGINE_H
-#define ENGINE_H
+#pragma once
 
 #include "../include/config_loader.h"
 #include "../include/logger.h"
@@ -19,6 +18,8 @@ public:
 
 private:
     ModManager modManager;
+    Utils utils;
+    Logger logger;
+    ConfigLoader configLoader;
 };
 
-#endif // ENGINE_H
