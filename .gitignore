@@ -7,6 +7,7 @@ cython_debug/
 
 # User Configurations
 config.txt
+config.json
 
 # Virtual environment
 venv/
