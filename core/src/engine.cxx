@@ -36,9 +36,8 @@ void Engine::init()
     this->logger = Logger(logFile);
     
     // Config Loader Initialization
-    std::string configDir = "../../user_information/";
-    std::string configFile = configDir + "config.txt";
-    std::filesystem::create_directories(configDir);
+    std::string configDir = "/user_information";
+    std::string configFile = configDir + "/config.txt";
     this->configLoader = ConfigLoader(configFile, this->logger);
 
     // Module Manager Initialization
