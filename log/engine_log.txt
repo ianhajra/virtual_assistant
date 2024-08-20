@@ -1,0 +1,2 @@
+[Tue Aug 20 16:03:06 2024] [[34mDEBUG[0m] Opened config file at: user_information/config.txt
+[Tue Aug 20 16:03:50 2024] [[34mDEBUG[0m] Opened config file at: user_information/config.txt
