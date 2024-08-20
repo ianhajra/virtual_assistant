@@ -5,6 +5,9 @@ __pycache__/
 # Cython debug symbols
 cython_debug/
 
+# User Configurations
+config.txt
+
 # Virtual environment
 venv/
 ENV/

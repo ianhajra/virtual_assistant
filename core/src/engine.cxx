@@ -36,7 +36,7 @@ void Engine::init()
     this->logger = Logger(logFile);
     
     // Config Loader Initialization
-    std::string configDir = "/user_information";
+    std::string configDir = "user_information";
     std::string configFile = configDir + "/config.txt";
     this->configLoader = ConfigLoader(configFile, this->logger);
 

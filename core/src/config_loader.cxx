@@ -22,6 +22,9 @@ ConfigLoader::ConfigLoader(std::string &file_path, Logger& logger)
         new_config_file.close();
         this->config_file.open(file_path);
     }
+    else {
+        logger.log(LogLevel::DEBUG, "Opened config file at: " + file_path);
+    }
 }
 
 ConfigLoader::~ConfigLoader()
