@@ -47,4 +47,4 @@ bin/
 obj/
 
 # Log Files
-default_log.txt
+./log/*.txt
