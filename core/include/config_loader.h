@@ -3,12 +3,9 @@
 
 #include <string>
 #include <fstream>
+#include "../include/json.hpp"
 
 class Logger; // Forward declaration of Logger
-
-struct config {
-    std::string name;
-};
 
 class ConfigLoader {
 public:
@@ -21,9 +18,7 @@ public:
     void readConfig();
 
 private:
-    config user_config;
-    std::ifstream config_file;
-    std::string file_path;
+    nlohmann::json user_config;
 };
 
 #endif // CONFIG_LOADER_H
