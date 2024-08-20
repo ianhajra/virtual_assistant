@@ -3,6 +3,12 @@
 #include <iostream>
 #include <ctime>
 
+// Default constructor: Initialize with a default filename
+Logger::Logger()
+{
+    initializeDefaultLogFile();
+}
+
 // Constructor: Opens the log file
 Logger::Logger(const std::string& filename)
 {
@@ -17,6 +23,33 @@ Logger::~Logger()
 {
     if (logFile.is_open()) {
         logFile.close();
+    }
+}
+
+// Move constructor
+Logger::Logger(Logger&& other) noexcept
+    : logFile(std::move(other.logFile))
+{
+}
+
+// Move assignment operator
+Logger& Logger::operator=(Logger&& other) noexcept
+{
+    if (this != &other) {
+        if (logFile.is_open()) {
+            logFile.close();
+        }
+        logFile = std::move(other.logFile);
+    }
+    return *this;
+}
+
+// Initialize with a default filename
+void Logger::initializeDefaultLogFile()
+{
+    logFile.open("default_log.txt", std::ios::app);
+    if (!logFile) {
+        std::cerr << "Error: Could not open default log file" << std::endl;
     }
 }
 

@@ -3,24 +3,31 @@
 #include <string>
 #include <fstream>
 
-/**
- * LogLevel class used to determine what type of logging to do
- */
 enum class LogLevel {
     DEBUG,
     WARNING,
     ERROR
 };
 
-/**
- * Updated Logger class to handle the appropriate methods that will be used
- * for logging throughout the virtual_assistant
- */
 class Logger
 {
 public:
-    Logger(const std::string& filename);
+    // Default constructor: Initialize with a default filename
+    Logger();
+
+    // Constructor: Takes a filename for the log file
+    explicit Logger(const std::string& filename);
+
+    // Destructor: Closes the log file
     ~Logger();
+
+    // Delete copy constructor and copy assignment operator
+    Logger(const Logger&) = delete;
+    Logger& operator=(const Logger&) = delete;
+
+    // Allow move construction and move assignment
+    Logger(Logger&& other) noexcept;
+    Logger& operator=(Logger&& other) noexcept;
 
     void log(LogLevel level, const std::string& message);
 
@@ -32,4 +39,5 @@ private:
     std::ofstream logFile;
     std::string levelToString(LogLevel level);
     void logMessage(const std::string& levelStr, const std::string& message);
+    void initializeDefaultLogFile(); // Initialize with a default filename
 };

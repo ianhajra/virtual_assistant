@@ -1,4 +1,5 @@
 #include "../include/engine.h"
+#include <filesystem>
 
 /**
  * This constructor will initialize all of the appropriate classes
@@ -25,8 +26,14 @@ Engine::~Engine()
 void Engine::init()
 {
     this->utils = Utils();
-    this->logger = Logger();
+
+    std::string logDir = "../../log";
+    std::string logFile = logDir + "/engine_log.txt";
+    std::filesystem::create_directories(logDir);
+    this->logger = Logger(logFile);
+
     this->configLoader = ConfigLoader();
+    
     this->modManager = ModManager();
 }
 
