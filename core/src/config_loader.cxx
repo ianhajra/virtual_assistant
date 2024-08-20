@@ -41,6 +41,7 @@ void ConfigLoader::readConfig(std::ifstream &config_file){
     // This takes the user_config member variable and gives it all the info
     // from the json file. It works as an STL container. 
     this->user_config = json::parse(config_file);
+    std::cout << this->user_config["name"] << std::endl;
 }
 
 ConfigLoader& ConfigLoader::operator=(ConfigLoader&& other)
