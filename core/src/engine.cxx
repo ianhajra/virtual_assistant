@@ -1,5 +1,6 @@
 #include "../include/engine.h"
 #include <filesystem>
+#include <iostream>
 
 /**
  * This constructor will initialize all of the appropriate classes
@@ -45,4 +46,5 @@ void Engine::init()
 
 void Engine::run()
 {
+    std::cout << "The engine can run!" << std::endl;
 }

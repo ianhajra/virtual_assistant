@@ -42,3 +42,6 @@ Thumbs.db
 # Build directories
 bin/
 obj/
+
+# Log Files
+default_log.txt
