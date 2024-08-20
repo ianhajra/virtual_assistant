@@ -25,16 +25,16 @@ Engine::~Engine()
  *   - a module_manaer
  */
 void Engine::init()
-{   
+{
     // Utils Initialization
     this->utils = Utils();
 
     // Logger Initialization
-    std::string logDir = "../../log";
+    std::string logDir = "./log";
     std::string logFile = logDir + "/engine_log.txt";
     std::filesystem::create_directories(logDir);
     this->logger = Logger(logFile);
-    
+
     // Config Loader Initialization
     std::string configDir = "../../user_information/";
     std::string configFile = configDir + "config.txt";
