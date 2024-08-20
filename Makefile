@@ -38,5 +38,12 @@ auto:
 	make clean all
 	./$(TARGET)
 
+# Reset the log files
+reset:
+	@echo "Resetting log files..."
+	@rm -f log/engine_log.txt log/default_log.txt
+	@touch log/engine_log.txt log/default_log.txt
+	@echo "Log files have been reset."
+
 # Phony targets
-.PHONY: all clean print
+.PHONY: all clean print auto reset
