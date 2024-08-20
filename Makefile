@@ -35,7 +35,7 @@ clean:
 
 # auto run after build
 auto:
-	make all
+	make clean all
 	./$(TARGET)
 
 # Phony targets
