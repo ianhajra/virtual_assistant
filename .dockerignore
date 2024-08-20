@@ -1,0 +1,21 @@
+# documentation files
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE
+
+# Ignore version control directories
+.git
+
+# Ignore virtual environments
+venv/
+.env
+
+# Ignore test directories
+tests/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Dockerfile and docker-compose files
+Dockerfile
