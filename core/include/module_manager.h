@@ -4,4 +4,6 @@ public:
     ModManager();
 
     ~ModManager();
+
+private:
 };
