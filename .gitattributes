@@ -1,2 +1,2 @@
 # Exclude core/include/json.hpp from code breakdown and lines of code
-core/include/json.hpp linguist-vendored
+core/include/json.hpp linguist-detectable=false
