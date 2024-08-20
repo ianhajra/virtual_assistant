@@ -14,4 +14,10 @@ This project utilizes the following third-party libraries:
 - **Description**: pytest is a testing framework for Python that allows for simple and scalable test creation.
 - **Website**: [pytest](https://pytest.org/)
 
+## SpeechRecognition
+
+- **License**: BSD 3-Clause License
+- **Description**: SpeechRecognition is a library that provides support for speech recognition in Python, allowing developers to convert spoken words into text.
+- **Website**: [SpeechRecognition](https://pypi.org/project/SpeechRecognition/)
+
 For details on the Apache License 2.0, please refer to the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
