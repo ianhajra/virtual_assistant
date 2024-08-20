@@ -10,9 +10,13 @@ ConfigLoader::ConfigLoader()
 {
 
 }
+
+ConfigLoader::~ConfigLoader()
+{
+
+}
  
-ConfigLoader::ConfigLoader(std::string &file_path, Logger& logger)
-{   
+ConfigLoader::ConfigLoader(std::string &file_path, Logger& logger){   
     std::ifstream config_file;
     config_file.open(file_path);
     if (!config_file.is_open())
@@ -21,7 +25,7 @@ ConfigLoader::ConfigLoader(std::string &file_path, Logger& logger)
         logger.log(LogLevel::WARNING, "Creating new config file at: " + file_path);
 
         std::ofstream new_config_file(file_path);
-        new_config_file << "{\n \"name\": \"John Smith\" \n}" << std::endl;
+        new_config_file << "{\n \"name\": \"DEFAULT NAME\" \n}" << std::endl;
         new_config_file.close();
         config_file.open(file_path);
     }
@@ -29,16 +33,14 @@ ConfigLoader::ConfigLoader(std::string &file_path, Logger& logger)
         logger.log(LogLevel::DEBUG, "Opened config file at: " + file_path);
     }
 
-    readConfig();
+    readConfig(config_file);
 }
 
-ConfigLoader::~ConfigLoader()
-{
 
-}
-
-void ConfigLoader::readConfig(){
-
+void ConfigLoader::readConfig(std::ifstream &config_file){
+    // This takes the user_config member variable and gives it all the info
+    // from the json file. It works as an STL container. 
+    this->user_config = json::parse(config_file);
 }
 
 ConfigLoader& ConfigLoader::operator=(ConfigLoader&& other)
