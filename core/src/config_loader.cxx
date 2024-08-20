@@ -9,6 +9,11 @@ struct config{
     std::string name;
 };
 
+ConfigLoader::ConfigLoader()
+{
+    
+}
+
 ConfigLoader::ConfigLoader(std::string &file_path, Logger& logger)
 {   
     this->config_file.open(file_path);
