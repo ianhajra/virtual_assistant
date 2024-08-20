@@ -3,12 +3,10 @@
 
 #include <string>
 #include <fstream>
+#include "../include/json.hpp"
+// more info on json @ https://github.com/nlohmann/json/tree/develop?tab=readme-ov-file#read-json-from-a-file
 
 class Logger; // Forward declaration of Logger
-
-struct config {
-    std::string name;
-};
 
 class ConfigLoader {
 public:
@@ -18,12 +16,10 @@ public:
 
     ConfigLoader& operator=(ConfigLoader&& other);
 
-    void readConfig();
+    void readConfig(std::ifstream &config_file);
 
 private:
-    config user_config;
-    std::ifstream config_file;
-    std::string file_path;
+    nlohmann::json user_config;
 };
 
 #endif // CONFIG_LOADER_H
