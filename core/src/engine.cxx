@@ -30,7 +30,7 @@ void Engine::init()
     this->utils = Utils();
 
     // Logger Initialization
-    std::string logDir = "./log";
+    std::string logDir = "log";
     std::string logFile = logDir + "/engine_log.txt";
     std::filesystem::create_directories(logDir);
     this->logger = Logger(logFile);
