@@ -32,7 +32,7 @@ git add -A
 git commit -m "#IssueNumber: Info About It"
 
 # Push the changes to the remote branch and set the upstream branch
-git push --set-upstream origin feature/your-feature-name
+git push --set-upstream origin IssueNumber-Brief-Description
 ```
 
 ### 2.3. Open a Pull Request
