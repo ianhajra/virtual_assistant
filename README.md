@@ -20,6 +20,10 @@ We are still working on the installation and setup guide. Please check back late
 
 We welcome contributions from the community! If you would like to help out with the project, please refer to our [Contributing Guide](CONTRIBUTING.md) for details on how to get started.
 
+## Dependencies
+
+For information on third-party libraries and their licenses, please refer to the [Dependencies](DEPENDENCIES.md) file.
+
 ## Code of Conduct
 
 We strive to maintain a positive and inclusive environment for all contributors and users. Please review our [Code of Conduct](CODE_OF_CONDUCT.md) to understand our expectations for behavior.
