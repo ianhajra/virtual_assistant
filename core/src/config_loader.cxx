@@ -1,6 +1,7 @@
 #include "../include/config_loader.h"
 #include "../include/logger.h"
 #include "../include/utils.h"
+#include "../include/json.hpp"
 #include <fstream>
 #include <iostream>
 
@@ -8,7 +9,7 @@ ConfigLoader::ConfigLoader()
 {
 
 }
-
+ 
 ConfigLoader::ConfigLoader(std::string &file_path, Logger& logger)
 {   
     this->config_file.open(file_path);
@@ -25,6 +26,8 @@ ConfigLoader::ConfigLoader(std::string &file_path, Logger& logger)
     else {
         logger.log(LogLevel::DEBUG, "Opened config file at: " + file_path);
     }
+
+    readConfig();
 }
 
 ConfigLoader::~ConfigLoader()
@@ -33,10 +36,7 @@ ConfigLoader::~ConfigLoader()
 }
 
 void ConfigLoader::readConfig(){
-    // just read the first line for now
-    std::string input;
-    getline(this->config_file, input);
-    this->user_config.name = input;
+    
 }
 
 ConfigLoader& ConfigLoader::operator=(ConfigLoader&& other)
