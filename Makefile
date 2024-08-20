@@ -31,7 +31,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cxx
 
 # Clean up build artifacts
 clean:
-	rm -rf $(OBJ_DIR) $(BIN_DIR) default_log.txt
+	rm -rf $(OBJ_DIR) $(BIN_DIR)
 
 # auto run after build
 auto:
