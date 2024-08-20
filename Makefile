@@ -33,5 +33,10 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cxx
 clean:
 	rm -rf $(OBJ_DIR) $(BIN_DIR)
 
+# auto run after build
+auto:
+	make all
+	./$(TARGET)
+
 # Phony targets
 .PHONY: all clean print
