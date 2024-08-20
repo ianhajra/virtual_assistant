@@ -47,7 +47,7 @@ Logger& Logger::operator=(Logger&& other) noexcept
 // Initialize with a default filename
 void Logger::initializeDefaultLogFile()
 {
-    logFile.open("./log/default_log.txt", std::ios::app);
+    logFile.open("log/default_log.txt", std::ios::app);
     if (!logFile) {
         std::cerr << "Error: Could not open default log file" << std::endl;
     }
