@@ -4,11 +4,6 @@
 #include <fstream>
 #include <iostream>
 
-struct config{
-    // this is just a placeholder for now
-    std::string name;
-};
-
 ConfigLoader::ConfigLoader()
 {
     
