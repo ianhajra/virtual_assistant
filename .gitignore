@@ -38,3 +38,7 @@ dmypy.json
 
 # Windows
 Thumbs.db
+
+# Build directories
+bin/
+obj/
