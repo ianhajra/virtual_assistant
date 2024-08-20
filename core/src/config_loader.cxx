@@ -30,7 +30,7 @@ ConfigLoader::ConfigLoader(std::string &file_path, Logger& logger){
         config_file.open(file_path);
     }
     else {
-        logger.log(LogLevel::DEBUG, "Opened config file at: " + file_path);
+        logger.log(LogLevel::INFO, "Opened config file at: " + file_path);
     }
 
     readConfig(config_file);

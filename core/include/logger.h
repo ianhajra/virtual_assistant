@@ -5,6 +5,7 @@
 
 enum class LogLevel {
     DEBUG,
+    INFO,
     WARNING,
     ERROR
 };
@@ -32,12 +33,14 @@ public:
     void log(LogLevel level, const std::string& message);
 
     void logDebug(const std::string& message);
+    void logInfo(const std::string& message);
     void logWarning(const std::string& message);
     void logError(const std::string& message);
 
 private:
     std::ofstream logFile;
+
     std::string levelToString(LogLevel level);
-    void logMessage(const std::string& levelStr, const std::string& message);
+    void logMessage(LogLevel level, const std::string& message);
     void initializeDefaultLogFile(); // Initialize with a default filename
 };
