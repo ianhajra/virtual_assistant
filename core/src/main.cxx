@@ -3,6 +3,8 @@
 
 // TODO: Write Code Here
 int main(int argc, char* argv[]){
-    std::cout << "Hello World!\n";
+    Engine engine;
+    engine.init();
+
     return 0;
 }

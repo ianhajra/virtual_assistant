@@ -18,10 +18,12 @@ public:
 
     ConfigLoader& operator=(ConfigLoader&& other);
 
+    void readConfig();
+
 private:
-    void init(const std::string &file_path, Logger& logger);
     config user_config;
     std::ifstream config_file;
+    std::string file_path;
 };
 
 #endif // CONFIG_LOADER_H
