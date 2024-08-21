@@ -34,6 +34,8 @@ ConfigLoader::ConfigLoader(std::string &file_path, Logger& logger){
     }
 
     readConfig(config_file);
+
+    logger.log(LogLevel::INFO, "ConfigLoader Initialized");
 }
 
 
