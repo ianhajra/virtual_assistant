@@ -1,0 +1,6 @@
+[Tue Aug 20 23:40:23 2024] [[32mINFO[0m] Logger Initialized
+[Tue Aug 20 23:40:23 2024] [[32mINFO[0m] Opened config file at: core/cfg/config.json
+[Tue Aug 20 23:40:23 2024] [[32mINFO[0m] ConfigLoader Initialized
+[Tue Aug 20 23:40:23 2024] [[32mINFO[0m] ModManager initialized.
+[Tue Aug 20 23:40:23 2024] [[32mINFO[0m] Engine Running
+[Tue Aug 20 23:40:23 2024] [[32mINFO[0m] Engine Stopping

@@ -40,10 +40,12 @@ void Engine::init()
     this->configLoader = ConfigLoader(configFile, this->logger);
 
     // Module Manager Initialization
-    this->modManager = ModManager();
+    this->modManager = ModManager(this->logger);
 }
 
 void Engine::run()
 {
-    std::cout << "The engine can run!" << std::endl;
+    this->logger.log(LogLevel::INFO, "Engine Running");
+
+    this->logger.log(LogLevel::INFO, "Engine Stopping");
 }
