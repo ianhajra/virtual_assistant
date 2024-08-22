@@ -1,7 +1,7 @@
 from pathlib import Path
 import speech_recognition as sr
 
-def stt(filepath: Path) -> str:
+def stt_tester(filepath: Path) -> str:
     r = sr.Recognizer()
     with sr.AudioFile(str(filepath)) as source:
         audio = r.record(source)
