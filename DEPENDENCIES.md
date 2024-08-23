@@ -22,6 +22,18 @@ This project utilizes the following third-party libraries:
 - **Description**: SpeechRecognition is a library that provides support for speech recognition in Python, allowing developers to convert spoken words into text.
 - **Website**: [SpeechRecognition](https://pypi.org/project/SpeechRecognition/)
 
+### PyAudio
+
+- **License**: MIT License
+- **Description**: PyAudio provides Python bindings for PortAudio, a cross-platform audio library, enabling audio I/O support in Python projects.
+- **Website**: [PyAudio](https://pypi.org/project/PyAudio/)
+
+### PortAudio (required for PyAudio)
+
+- **License**: MIT License
+- **Description**: PortAudio is a portable, cross-platform library that provides a simple API for recording and playing audio using audio devices on various platforms.
+- **Website**: [PortAudio](http://www.portaudio.com/)
+
 For details on the Apache License 2.0, please refer to the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 ## C++ Dependencies
