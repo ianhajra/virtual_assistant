@@ -17,8 +17,8 @@ sentences[5] = "can you help me find the nearest coffee shop"
 # Function to read the sentence and compare it to the spoken sentence
 def reader(i):
     print("")
-    print("Test " + str(i+1) + ":")
-    print("Say the following sentence: ")
+    print("\033[1mTest \033[0m" + str(i+1) + ":")
+    print("\033[1mSay the following sentence: \033[0m")
     print(sentences[i])
     print("")
     print("Press enter to start recording...")
@@ -28,12 +28,10 @@ def reader(i):
 
     if(speech == sentences[i]):
         print("You said: " + speech)
-        print("")
         print("Test " + str(i+1) + " passed")
         assert True
     else:
         print("You said: " + speech)
-        print("")
         print("Test " + str(i+1) + " failed")
         assert False
 
