@@ -20,8 +20,9 @@ def stt_tester(filepath: Path) -> str:
 def stt() -> str:
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        print("Say something!")
+        print("Recording audio...")
         audio = r.listen(source)
+        print("Audio recorded")
 
     try:
         speech = r.recognize_google(audio)
