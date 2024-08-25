@@ -1,6 +1,19 @@
-[Tue Aug 20 23:40:23 2024] [[32mINFO[0m] Logger Initialized
-[Tue Aug 20 23:40:23 2024] [[32mINFO[0m] Opened config file at: core/cfg/config.json
-[Tue Aug 20 23:40:23 2024] [[32mINFO[0m] ConfigLoader Initialized
-[Tue Aug 20 23:40:23 2024] [[32mINFO[0m] ModManager initialized.
-[Tue Aug 20 23:40:23 2024] [[32mINFO[0m] Engine Running
-[Tue Aug 20 23:40:23 2024] [[32mINFO[0m] Engine Stopping
+[Fri Aug 23 13:05:20 2024] [[32mINFO[0m] Logger Initialized
+[Fri Aug 23 13:05:20 2024] [[32mINFO[0m] Opened config file at: core/cfg/config.json
+[Fri Aug 23 13:05:20 2024] [[32mINFO[0m] ConfigLoader Initialized
+[Fri Aug 23 13:05:20 2024] [[32mINFO[0m] ModManager initialized
+[Fri Aug 23 13:05:20 2024] [[32mINFO[0m] Engine Running
+[Fri Aug 23 13:05:20 2024] [[32mINFO[0m] Engine Stopping
+[Fri Aug 23 13:38:46 2024] [[32mINFO[0m] Logger Initialized
+[Fri Aug 23 13:38:46 2024] [[33mWARNING[0m] Could not open config file at: core/cfg/config.json
+[Fri Aug 23 13:38:46 2024] [[33mWARNING[0m] Creating new config file at: core/cfg/config.json
+[Fri Aug 23 13:38:46 2024] [[32mINFO[0m] ConfigLoader Initialized
+[Fri Aug 23 13:38:46 2024] [[32mINFO[0m] ModManager initialized
+[Fri Aug 23 13:38:46 2024] [[32mINFO[0m] Engine Running
+[Fri Aug 23 13:38:46 2024] [[32mINFO[0m] Engine Stopping
+[Fri Aug 23 16:26:55 2024] [[32mINFO[0m] Logger Initialized
+[Fri Aug 23 16:26:55 2024] [[32mINFO[0m] Opened config file at: core/cfg/config.json
+[Fri Aug 23 16:26:55 2024] [[32mINFO[0m] ConfigLoader Initialized
+[Fri Aug 23 16:26:55 2024] [[32mINFO[0m] ModManager initialized
+[Fri Aug 23 16:26:55 2024] [[32mINFO[0m] Engine Running
+[Fri Aug 23 16:26:55 2024] [[32mINFO[0m] Engine Stopping
