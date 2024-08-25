@@ -37,3 +37,11 @@ For details on the Apache License 2.0, please refer to the [Apache License 2.0](
 - **License**: MIT License
 - **Description**: nlohmann/json is a C++ library for JSON manipulation, providing a simple and easy-to-use interface for working with JSON data.
 - **Website**: [nlohmann/json](https://github.com/nlohmann/json)
+
+### Catch2
+
+- **License**: MIT License
+- **Description**: Catch2 is a unit testing framework for C++ that is easy to use and integrates well with various build systems. It supports a range of testing features and is known for its simplicity and readability.
+- **Website**: [Catch2](https://github.com/catchorg/Catch2)
+
+For details on the MIT License, please refer to the [MIT License](https://opensource.org/licenses/MIT).
