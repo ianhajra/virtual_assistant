@@ -48,7 +48,7 @@ bin/
 obj/
 
 # Log Files
-./log/*.txt
+log/*.txt
 
 # config.json
 core/cfg/config.json
