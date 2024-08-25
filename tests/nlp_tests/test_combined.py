@@ -79,8 +79,7 @@ def test_combined():
         "countri",
     ]
 
-
-def test_integrator():
+def test_integrator_nlp():
     base_path = Path("tests/nlp_tests/audio")
     assert process_text(stt_tester(base_path / "test_audio_one.wav")) == nlp(
         base_path / "test_audio_one.wav"
