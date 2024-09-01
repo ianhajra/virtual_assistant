@@ -28,7 +28,9 @@ pytest -v
 #### Specific Test Files
 
 To run a specific Python test file:  
-**`pytest tests/<path_to_test_file>.py`**
+```bash
+pytest tests/<path_to_test_file>.py
+```
 
 ### C++ Tests
 
@@ -47,14 +49,6 @@ pytest -s tests/nlp_tests/manual_live_audio.py
 This will allow the script to capture live audio from your microphone.
 
 ### C++ Manual Tests
-
-If your project contains any manual C++ tests that require specific user input or hardware interaction, please refer to the following general guidelines:
-
-1. Make sure all dependencies are installed.
-2. Follow any specific instructions provided in the relevant C++ test files.
-
-For running the manual C++ tests:  
-**`<command_to_run_cpp_manual_tests>`**
 
 ---
 
