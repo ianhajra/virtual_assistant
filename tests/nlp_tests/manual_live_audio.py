@@ -1,6 +1,6 @@
 # WARNING! RUN THE TEST WITH THE "-s" FLAG IN ORDER TO 
 # PROPERLY RUN
-# example: pytest -s tests/nlp_tests/test_live_audio.py
+# example: pytest -s tests/nlp_tests/manual_live_audio.py
 
 from nlp.speech_to_text import stt
 import pyaudio
