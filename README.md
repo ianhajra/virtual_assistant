@@ -1,10 +1,10 @@
 # Virtual Assistant
 
-Welcome to the Virtual Assistant project! This is an open-source virtual assistant designed to run on macOS, Linux, and Windows. It is built to handle a variety of tasks, and is tailored to the needs of working professionals.
+Welcome to the Virtual Assistant project! This is an open-source virtual assistant designed to run on macOS, Linux, and Windows. It is built to handle a variety of tasks and is tailored to the needs of working professionals.
 
 ## Work in Progress
 
-Please note that this project is currently a work in progress. We are actively developing all features of this product, and are actively seeking developers! Your feedback and contributions are highly valued.
+Please note that this project is currently a work in progress. We are actively developing all features of this product and are actively seeking developers! Your feedback and contributions are highly valued.
 
 ## Features
 
@@ -35,5 +35,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 For any questions or additional information, feel free to reach out to us at [iankhajra@gmail.com].
+
+## Tests
+
+For detailed information on how to run both automatic and manual tests, please refer to the [Tests Guide](tests/tests.md).
 
 Thank you for your interest in the Virtual Assistant project!
